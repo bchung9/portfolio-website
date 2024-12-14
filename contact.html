@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo Placeholder">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="contact-button">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="contact">
+    <h1 class="section-title">Contact Me</h1>
+    <p>
+      Please feel free to reach out using the form below.
+    </p>
+    <form action="https://formspree.io/f/xjkveezv" method="POST">
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+      <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>

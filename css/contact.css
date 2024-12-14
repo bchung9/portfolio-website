@@ -1,0 +1,151 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo on the left, links on the right */
+    align-items: center;
+    position: absolute; /* Navbar remains at the top */
+    top: 0;
+    width: 100%; /* Full width for the navbar */
+    padding: 30px 50px; /* Adds space around the navbar */
+    background: transparent;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Font globally applied */
+  }
+  
+  .logo img {
+    max-height: 60px; /* Slightly larger logo size */
+    object-fit: contain;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Spacing between navigation links */
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none; /* Remove underline by default */
+    font-weight: bold; /* Bold links for better visibility */
+    font-size: 16px;
+    color: black; /* Black navigation links */
+    padding: 10px 25px; /* Add padding for a better clickable area */
+    border-bottom: 2px solid transparent; /* Add transparent underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  nav ul li a:hover {
+    border-bottom: 2px solid black; /* Underline appears on hover */
+    color: #333; /* Slightly darker color on hover */
+  }
+  
+  nav ul li a.contact-button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border-bottom: none; /* No underline for button */
+  }
+  
+  nav ul li a.contact-button:hover {
+    background-color: #333;
+    text-decoration: none; /* Avoid underline on hover */
+  }
+
+/* Global Font Style */
+body {
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font globally */
+}
+
+
+/* Page Background */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #D7D7D7; /* Light gray background */
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+/* Main Content */
+.contact {
+    margin-top: 120px; /* Space below the navbar */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contact Section Title */
+.contact .section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid black; /* Black rectangle outline */
+    display: inline-block; /* Ensures the border wraps tightly around the text */
+    margin-bottom: 20px; /* Spacing below the title */
+}
+
+/* Paragraph Styles */
+.contact p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Spacing between form elements */
+    width: 100%;
+    max-width: 500px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%; /* Full width of form elements */
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus,
+form button:hover {
+    border-color: #333; /* Slightly darker border on focus/hover */
+    outline: none;
+}
+
+form textarea {
+    resize: vertical; /* Allow resizing vertically only */
+    min-height: 100px;
+}
+
+form button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+/* Ensure footer stays at the bottom */
+body::after {
+    content: '';
+    display: block;
+    height: 50px;
+}

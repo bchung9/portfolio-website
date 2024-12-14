@@ -1,0 +1,109 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo on the left, links on the right */
+    align-items: center;
+    position: absolute; /* Navbar remains at the top */
+    top: 0;
+    width: 100%; /* Full width for the navbar */
+    padding: 30px 50px; /* Adds space around the navbar */
+    background: transparent;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Font globally applied */
+  }
+  
+  .logo img {
+    max-height: 60px; /* Slightly larger logo size */
+    object-fit: contain;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Spacing between navigation links */
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none; /* Remove underline by default */
+    font-weight: bold; /* Bold links for better visibility */
+    font-size: 16px;
+    color: black; /* Black navigation links */
+    padding: 10px 25px; /* Add padding for a better clickable area */
+    border-bottom: 2px solid transparent; /* Add transparent underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  nav ul li a:hover {
+    border-bottom: 2px solid black; /* Underline appears on hover */
+    color: #333; /* Slightly darker color on hover */
+  }
+  
+  nav ul li a.contact-button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border-bottom: none; /* No underline for button */
+  }
+  
+  nav ul li a.contact-button:hover {
+    background-color: #333;
+    text-decoration: none; /* Avoid underline on hover */
+  }
+
+/* Page Background */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #D7D7D7; /* Light gray background */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font globally */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Resume Section */
+.resume {
+    text-align: center;
+    margin-top: -300px; /* Reduced space below the navbar */
+}
+
+.resume .section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid black; /* Black rectangle outline */
+    display: inline-block; /* Ensures the border wraps tightly around the text */
+    margin-bottom: 20px; /* Reduced space between title and button */
+}
+
+.button-container {
+    text-align: center; /* Ensure the button is centered */
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}

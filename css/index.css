@@ -1,0 +1,157 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo on the left, links on the right */
+  align-items: center;
+  position: absolute; /* Navbar remains at the top */
+  top: 0;
+  width: 100%; /* Full width for the navbar */
+  padding: 30px 50px; /* Adds space around the navbar */
+  background: transparent;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; /* Font globally applied */
+}
+
+.logo img {
+  max-height: 60px; /* Slightly larger logo size */
+  object-fit: contain;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px; /* Spacing between navigation links */
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline by default */
+  font-weight: bold; /* Bold links for better visibility */
+  font-size: 16px;
+  color: white; /* Black navigation links */
+  padding: 10px 25px; /* Add padding for a better clickable area */
+  border-bottom: 2px solid transparent; /* Add transparent underline */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid white; /* Underline appears on hover */
+  color: #333; /* Slightly darker color on hover */
+}
+
+nav ul li a.contact-button {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  border-bottom: none; /* No underline for button */
+}
+
+nav ul li a.contact-button:hover {
+  background-color: #333;
+  text-decoration: none; /* Avoid underline on hover */
+}
+
+/* Global Font Style */
+body {
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font globally */
+}
+
+/* General Layout for Homepage */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Disable scrolling on the homepage */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+}
+
+.homepage {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Left Column Styles */
+.text-container {
+  flex: 1; /* Take up half of the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align content to the left */
+  text-align: left;
+  padding: 0 0px 0 150px; /* Add more left padding without exceeding half the page */
+  background-color: #D7D7D7; /* Matches the background color */
+}
+
+.text-container h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0;
+  color: black;
+}
+
+.text-container h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: black;
+}
+
+.text-container p {
+  font-size: 1.2em;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.icons {
+  display: flex;
+  gap: 25px; /* Space between icons */
+  margin-top: 20px;
+}
+
+.icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 50%; /* Make them circular */
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.icons a img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.icons a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Right Column Styles */
+.image-container {
+  flex: 1; /* Take up half of the screen */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  background-color: black; /* Right half is black */
+}
+
+.image-container img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+}
+

@@ -1,0 +1,168 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo on the left, links on the right */
+    align-items: center;
+    position: absolute; /* Navbar remains at the top */
+    top: 0;
+    width: 100%; /* Full width for the navbar */
+    padding: 30px 50px; /* Adds space around the navbar */
+    background: transparent;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Font globally applied */
+}
+
+.logo img {
+    max-height: 60px; /* Slightly larger logo size */
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Spacing between navigation links */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline by default */
+    font-weight: bold; /* Bold links for better visibility */
+    font-size: 16px;
+    color: white; /* White navigation links for better contrast */
+    padding: 10px 25px; /* Add padding for a better clickable area */
+    border-bottom: 2px solid transparent; /* Add transparent underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid white; /* Underline appears on hover */
+    color: lightgray; /* Better contrast on hover */
+}
+
+nav ul li a.contact-button {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border-bottom: none; /* No underline for button */
+}
+
+nav ul li a.contact-button:hover {
+    background-color: #333;
+    text-decoration: none; /* Avoid underline on hover */
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* All-black background */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font globally */
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+    color: white; /* Default text color is white */
+}
+
+/* Main Content */
+.portfolio {
+    margin-top: 120px; /* Ensures content is below the navbar */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Portfolio Section Title */
+.portfolio .section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white; /* Text is white */
+    padding: 10px 35px;
+    border: 2px solid white; /* White rectangle outline */
+    display: inline-block; /* Ensures the border wraps tightly around the text */
+    margin-bottom: 20px; /* Spacing below the title */
+}
+
+/* Filter Buttons */
+.portfolio .filter {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Increased spacing between filters */
+    padding-bottom: 20px;
+}
+
+.portfolio .filter button {
+    background: none; /* Remove background */
+    border: none; /* Remove borders */
+    color: white; /* Text is white */
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    padding: 0 10px;
+}
+
+.portfolio .filter button::after {
+    content: '';
+    display: block;
+    width: 100%; /* Line spans the entire button text */
+    height: 2px;
+    background-color: white; /* Permanent underline */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.portfolio .filter button:hover {
+    color: lightgray; /* Change text color on hover */
+}
+
+/* Portfolio Grid */
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Larger placeholders */
+    gap: 30px; /* More spacing between grid items */
+    justify-content: center; /* Center the grid horizontally */
+    margin: 0 auto; /* Center grid within the container */
+    max-width: 1200px; /* Limit grid width for better centering */
+}
+
+.portfolio-grid a.image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width within grid cell */
+    height: 200px; /* Larger height for placeholders */
+    background-color: black; /* Match the background */
+    border: 2px solid white; /* White outline for placeholders */
+    text-decoration: none; /* Remove underline for links */
+    font-size: 1.2em;
+    color: white; /* Placeholder text is white */
+    position: relative; /* Allows for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.portfolio-grid a.image-placeholder span {
+    z-index: 1;
+}
+
+.portfolio-grid a.image-placeholder::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dim effect */
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-grid a.image-placeholder:hover {
+    transform: translateY(-10px); /* Rises slightly on hover */
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2); /* Subtle glow effect */
+}
+
+.portfolio-grid a.image-placeholder:hover::after {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighten dim effect on hover */
+}
